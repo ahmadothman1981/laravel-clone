@@ -13,7 +13,9 @@ $router->addRouteMiddleware('auth', Auth::class);
 
 // General routes
 $router->add('GET', '/', 'IndexController@index');
-
+//user regestration
+$router->add('GET', '/register', 'UserController@create');
+$router->add('POST', '/register', 'UserController@store');
 // Auth routes
 $router->add('GET', '/login', 'AuthController@create');
 $router->add('POST', '/login', 'AuthController@store');
